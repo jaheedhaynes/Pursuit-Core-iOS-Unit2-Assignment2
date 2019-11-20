@@ -21,6 +21,7 @@ class GOTTableViewCell: UITableViewCell {
         episodeTitleLabel.text = gotCellepisode.name
         seasonEpisodeNum.text = "Season:\(gotCellepisode.season) Episode:\(gotCellepisode.number)"
         
+        episodeTitleLabel.adjustsFontSizeToFitWidth = true
     }
     
 }

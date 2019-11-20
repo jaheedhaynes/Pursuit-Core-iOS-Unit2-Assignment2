@@ -83,6 +83,11 @@ extension HomeScreenVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Season \(gotEpisodes[section].first!.season)"
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+           return 150
+           
+       }
 }
 
 
