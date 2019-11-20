@@ -10,33 +10,39 @@ import UIKit
 
 class HomeScreenVC: UIViewController {
     
-//   var images: [UIImage] = []
+    //   var images: [UIImage] = []
     
     @IBOutlet weak var tableView: UITableView!
     
-    var gotSeasons = [[GOTEpisode]]() {
-       didSet {
-          tableView.reloadData()
-       }
-      }
+    var gotEpisodes = [[GOTEpisode]]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    func gotInfoLoad(){
+        gotEpisodes = GOTEpisode.gotSections()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-        
-        dump(gotSeasons)
-
-        
+        tableView.delegate = self
+        gotInfoLoad()
+        //        gotEpisodes = GOTEpisode.gotSections()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let gotDetailSegueView = segue.destination as? GotSegueVC,
             let indexPath = tableView.indexPathForSelectedRow else {
-                return
+                fatalError("You Broke The App")
         }
-        
-        gotDetailSegueView.episode = gotSeasons[indexPath.section][indexPath.row]
+        gotDetailSegueView.gotEpisode = gotEpisodes[indexPath.section][indexPath.row]
     }
+    
+    //------------------------------------------------------------------------------------------------------
+    
+    // ** Early Test **
     
     //    func createArray() -> [UIImage] {
     //        var tempImages: [UIImage] = []
@@ -66,6 +72,8 @@ class HomeScreenVC: UIViewController {
     //        return tempImages
     //    }
     
+    //------------------------------------------------------------------------------------------------------
+    
     
 }
 
@@ -74,25 +82,43 @@ extension HomeScreenVC: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gotSeasons[section].count
+        return gotEpisodes[section].count
     }
     
-    
-    func numOfSeasonSections(in tableView: UITableView) -> Int {
-    return gotSeasons.count
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.gotEpisodes.count
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let image = images[indexPath.row]
-        
+        //        let image = images[indexPath.row]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "GOTTableViewCell") as? GOTTableViewCell else { fatalError("You Broke The App")}
         
-        let gotEpisodePerSectionAndRow = gotSeasons[indexPath.section][indexPath.row]
+        let gotEpisodePerSectionAndRow = gotEpisodes[indexPath.section][indexPath.row]
         
         cell.gotCell(for: gotEpisodePerSectionAndRow)
         
         return cell
     }
+    
+    
+    //------------------------------------------------------------------------------------------------------
+    // Methods for the Season Sections
+    
+    func numOfSeasonSections(in tableView: UITableView) -> Int {
+        return gotEpisodes.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Season \(gotEpisodes[section].first!.season)"
+    }
+    
+    //    //------------------------------------------------------------------------------------------------------
+    //            // Methods for delegation
+    //
+    //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    //        return 100
+    //    }
     
     
 }

@@ -100,34 +100,29 @@ class GOTEpisode {
         GOTEpisode(airdate: "2017-08-27", id: 1221415, name: "The Dragon and the Wolf", number: 7, season: 7, runtime: 60, summary: "Cersei sits on the Iron Throne; Daenerys sails across the Narrow Sea; Jon Snow is King in the North, and winter is finally here.", mediumImageID: "314502", originalImageID: "314502")
     ]
     
-    static func getSections() -> [[GOTEpisode]] {
+    static func gotSections() -> [[GOTEpisode]] {
         
-        let sortBySeason = GOTEpisode.allEpisodes.sorted {$0.season > $1.season}
+        //sorting GOT episodes by season in which they are in
+        let sortBySeason = GOTEpisode.allEpisodes.sorted {$0.season < $1.season}
         
-        let seasonNum = Set<Int>(sortBySeason.map {$0.season})
-        
-        var sectionArr = Array(repeating: [GOTEpisode](), count:seasonNum.count)
-        
-        let sortEpisodeByNumber = allEpisodes.sorted {$0.id > $1.id}
-        
-        let episodeTitles: Set<String> = Set(allEpisodes.map { $0.name})
-        
-       
-        
+        // retrieving all the individual seasons -----------------------------------------------------
+        let seasonNum = Set(sortBySeason.map {$0.season})
+        var gotSectionArr = Array(repeating: [GOTEpisode](), count:seasonNum.count)
         var currentIndex = 0
-        
         var currentSeason = sortBySeason.first?.season
+//        let episodeTitles: Set<String> = Set(allEpisodes.map {$0.name})
+//        let sortEpisodeByNumber = allEpisodes.sorted {$0.id > $1.id}
         
-        for gotSeason in sortBySeason {
-            if gotSeason.season == currentSeason {
-                sectionArr[currentIndex].append(gotSeason)
+        for gotEpisode in sortBySeason {
+            if gotEpisode.season == currentSeason {
+                gotSectionArr[currentIndex].append(gotEpisode)
             } else {
                 currentIndex += 1
-                currentSeason = gotSeason.season
-                
+                currentSeason = gotEpisode.season
+                gotSectionArr[currentIndex].append(gotEpisode)
             }
         }
         
-        return sectionArr
+        return gotSectionArr
     }
 }

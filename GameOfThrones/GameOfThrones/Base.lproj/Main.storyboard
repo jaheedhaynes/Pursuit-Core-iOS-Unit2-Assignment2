@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I1k-8a-bUL">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home ScreenVC-->
         <scene sceneID="Myx-oK-QvE">
             <objects>
-                <viewController id="eTb-RM-ajr" sceneMemberID="viewController">
+                <viewController id="eTb-RM-ajr" customClass="HomeScreenVC" customModule="GameOfThrones" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dGt-g2-3qe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,9 +58,14 @@
                                             <outlet property="GOTImageView" destination="CxJ-PI-5Us" id="Mmq-Fe-DjA"/>
                                             <outlet property="episodeTitleLabel" destination="qDr-tW-NPm" id="dN8-dV-eja"/>
                                             <outlet property="seasonEpisodeNum" destination="R4a-wj-cAc" id="y0s-x3-hDz"/>
+                                            <segue destination="pKD-11-FOe" kind="show" id="eP9-OI-p32"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="eTb-RM-ajr" id="LCc-rM-lIY"/>
+                                    <outlet property="delegate" destination="eTb-RM-ajr" id="bOu-NU-RSj"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -74,12 +79,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="P6i-98-OHA"/>
                     <connections>
+                        <outlet property="tableView" destination="C19-BX-JUy" id="XuY-n6-1PB"/>
                         <segue destination="pKD-11-FOe" kind="show" id="zNs-VA-TxB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bmj-on-yZ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-375.36231884057975" y="43.526785714285715"/>
+            <point key="canvasLocation" x="148" y="44"/>
         </scene>
         <!--Got SegueVC-->
         <scene sceneID="OcV-Ex-4vk">
@@ -93,25 +99,46 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="text" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gW7-bM-FmI">
-                                <rect key="frame" x="20" y="510" width="374" height="34"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="83C-Nn-3sg">
+                                <rect key="frame" x="20" y="579" width="374" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Hkq-BY-pAn">
+                                <rect key="frame" x="20" y="715" width="374" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1h-x9-13n">
+                                <rect key="frame" x="20" y="537" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="u9L-2Q-VXq"/>
                     </view>
                     <navigationItem key="navigationItem" id="tK1-xW-YEA"/>
                     <connections>
+                        <outlet property="gotEpisodeDescriptionLabelAfterSegue" destination="Hkq-BY-pAn" id="VSK-jd-Sz6"/>
+                        <outlet property="gotEpisodeDetailLabelSegue" destination="83C-Nn-3sg" id="M1W-kF-GRh"/>
                         <outlet property="gotImageAfterSegue" destination="Qkk-hj-UzY" id="FDg-nh-3mU"/>
-                        <outlet property="gotTextDetailAfterSegue" destination="gW7-bM-FmI" id="MBT-Az-WVf"/>
+                        <outlet property="gotTitleLabelAfterSegue" destination="Q1h-x9-13n" id="h0X-Pd-qD1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="60T-2A-Ovf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="421.73913043478262" y="43.526785714285715"/>
+            <point key="canvasLocation" x="1036" y="44"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JkC-BK-3kD">
@@ -132,4 +159,7 @@
             <point key="canvasLocation" x="-1285.5072463768117" y="43.526785714285715"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="zNs-VA-TxB"/>
+    </inferredMetricsTieBreakers>
 </document>
