@@ -14,15 +14,13 @@ class GOTTableViewCell: UITableViewCell {
     
     @IBOutlet weak var episodeTitleLabel: UILabel!
     
-    @IBOutlet weak var seasonNum: UILabel!
-    
-    @IBOutlet weak var episodeNum: UILabel!
+    @IBOutlet weak var seasonEpisodeNum: UILabel!
     
     func gotCell(for gotCellepisode: GOTEpisode) {
-        GOTImageView.image = imageView?.image
-        episodeTitleLabel.text
-        seasonNum.text
-        episodeNum.text
+        GOTImageView.image = UIImage(named: gotCellepisode.mediumImageID)
+        episodeTitleLabel.text = gotCellepisode.name
+        seasonEpisodeNum.text = "Season:\(gotCellepisode.season) Episode:\(gotCellepisode.number)"
+        
     }
     
 }
