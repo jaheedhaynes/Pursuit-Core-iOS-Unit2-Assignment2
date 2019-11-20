@@ -70,8 +70,8 @@
 				57D0D22D219F70EA00B5753A /* Main.storyboard */,
 				30E2A34823852C490007703B /* gotOpeningScreen.swift */,
 				30E2A344238419E70007703B /* HomeScreenVC.swift */,
-				30E2A342238415700007703B /* GOTTableViewCell.swift */,
 				30E2A3462384CF150007703B /* GotSegueVC.swift */,
+				30E2A342238415700007703B /* GOTTableViewCell.swift */,
 				57D0D23B219F719C00B5753A /* GOTEpisdoe.swift */,
 				30E2A34B238582F40007703B /* GOT-Theme.mp3 */,
 				30E2A34A238582F40007703B /* gotIceKingBackground.png */,
@@ -307,12 +307,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TTN2293JXM;
 				INFOPLIST_FILE = GameOfThrones/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.pursuit.GameOfThrones;
+				PRODUCT_BUNDLE_IDENTIFIER = org.pursuit.Got;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -324,12 +325,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TTN2293JXM;
 				INFOPLIST_FILE = GameOfThrones/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.pursuit.GameOfThrones;
+				PRODUCT_BUNDLE_IDENTIFIER = org.pursuit.Got;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

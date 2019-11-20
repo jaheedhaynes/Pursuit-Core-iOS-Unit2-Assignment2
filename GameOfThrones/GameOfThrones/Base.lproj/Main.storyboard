@@ -20,19 +20,16 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GOTTableViewCell" id="m8o-yK-nZT" customClass="GOTTableViewCell" customModule="GameOfThrones" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GOTTableViewLeftCell" id="m8o-yK-nZT" customClass="GOTTableViewCell" customModule="GameOfThrones" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m8o-yK-nZT" id="aod-TJ-cqO">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CxJ-PI-5Us">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CxJ-PI-5Us">
                                                     <rect key="frame" x="10" y="0.0" width="100" height="100"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="5fK-DR-pmt"/>
-                                                        <constraint firstAttribute="width" secondItem="CxJ-PI-5Us" secondAttribute="height" multiplier="1:1" id="RAd-Zd-eWS"/>
-                                                    </constraints>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="seaNum" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4a-wj-cAc">
                                                     <rect key="frame" x="118" y="40" width="276" height="21"/>
@@ -49,16 +46,46 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="CxJ-PI-5Us" firstAttribute="leading" secondItem="aod-TJ-cqO" secondAttribute="leading" constant="10" id="h8M-P0-oTi"/>
-                                                <constraint firstItem="CxJ-PI-5Us" firstAttribute="centerY" secondItem="aod-TJ-cqO" secondAttribute="centerY" id="ljr-y4-nwm"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="GOTImageView" destination="CxJ-PI-5Us" id="Mmq-Fe-DjA"/>
                                             <outlet property="episodeTitleLabel" destination="qDr-tW-NPm" id="dN8-dV-eja"/>
                                             <outlet property="seasonEpisodeNum" destination="R4a-wj-cAc" id="y0s-x3-hDz"/>
                                             <segue destination="pKD-11-FOe" kind="show" id="eP9-OI-p32"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GOTTableViewRightCell" id="qjj-cV-OcT" customClass="GOTTableViewCell" customModule="GameOfThrones" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="128" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qjj-cV-OcT" id="i1H-tY-bAD">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bYC-vu-swq">
+                                                    <rect key="frame" x="304" y="0.0" width="100" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="seaNum" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJc-cI-dp0">
+                                                    <rect key="frame" x="20" y="40" width="276" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="episodeTitle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAA-6L-B7t">
+                                                    <rect key="frame" x="20" y="11" width="276" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="GOTImageView" destination="bYC-vu-swq" id="tac-hy-k6N"/>
+                                            <outlet property="episodeTitleLabel" destination="MAA-6L-B7t" id="QX3-Rj-so9"/>
+                                            <outlet property="seasonEpisodeNum" destination="qJc-cI-dp0" id="Atf-57-MWJ"/>
+                                            <segue destination="pKD-11-FOe" kind="show" id="Iou-hS-Y68"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -80,7 +107,6 @@
                     <navigationItem key="navigationItem" id="P6i-98-OHA"/>
                     <connections>
                         <outlet property="tableView" destination="C19-BX-JUy" id="XuY-n6-1PB"/>
-                        <segue destination="pKD-11-FOe" kind="show" id="zNs-VA-TxB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bmj-on-yZ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

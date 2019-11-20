@@ -28,7 +28,7 @@ class GotSegueVC: UIViewController {
     
     func gotSegueUI(){
         guard let gotEpisodeTitle = gotEpisode else {
-            fatalError("You broke the app, Congrats 🥳")
+            fatalError("You broke the app!")
         }
         navigationItem.title = gotEpisodeTitle.name
         gotImageAfterSegue.image = UIImage(named: gotEpisodeTitle.originalImageID)

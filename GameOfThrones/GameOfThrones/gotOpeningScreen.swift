@@ -14,12 +14,17 @@ import UIKit
 class MusicPlayer: UIViewController {
     
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        startBackgroundMusic()
+    }
     
     static let shared = MusicPlayer()
     var audioPlayer: AVAudioPlayer?
+    
 
     func startBackgroundMusic() {
-        if let bundle = Bundle.main.path(forResource: "backgroundMusic", ofType: "mp3") {
+        if let bundle = Bundle.main.path(forResource: "GOT-Theme", ofType: "mp3") {
             let backgroundMusic = NSURL(fileURLWithPath: bundle)
             do {
                 audioPlayer = try AVAudioPlayer(contentsOf:backgroundMusic as URL)

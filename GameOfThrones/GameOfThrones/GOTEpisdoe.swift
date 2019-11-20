@@ -110,8 +110,7 @@ class GOTEpisode {
         var gotSectionArr = Array(repeating: [GOTEpisode](), count:seasonNum.count)
         var currentIndex = 0
         var currentSeason = sortBySeason.first?.season
-//        let episodeTitles: Set<String> = Set(allEpisodes.map {$0.name})
-//        let sortEpisodeByNumber = allEpisodes.sorted {$0.id > $1.id}
+
         
         for gotEpisode in sortBySeason {
             if gotEpisode.season == currentSeason {
