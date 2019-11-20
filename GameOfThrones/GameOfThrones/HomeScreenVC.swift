@@ -102,7 +102,7 @@ extension HomeScreenVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     
-    //------------------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------
     // Methods for the Season Sections
     
     func numOfSeasonSections(in tableView: UITableView) -> Int {
@@ -113,13 +113,6 @@ extension HomeScreenVC: UITableViewDataSource, UITableViewDelegate {
         return "Season \(gotEpisodes[section].first!.season)"
     }
     
-    //    //------------------------------------------------------------------------------------------------------
-    //            // Methods for delegation
-    //
-    //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    //        return 100
-    //    }
-    
-    
+        //------------------------------------------------------------------
 }
 

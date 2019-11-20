@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I1k-8a-bUL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O1C-RM-4Lk">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -85,7 +85,44 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bmj-on-yZ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="148" y="44"/>
+            <point key="canvasLocation" x="1057.9710144927537" y="43.526785714285715"/>
+        </scene>
+        <!--Music Player-->
+        <scene sceneID="9dz-0F-LHA">
+            <objects>
+                <viewController id="bk0-Il-dNh" customClass="MusicPlayer" customModule="GameOfThrones" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zx8-E6-0hW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gotIceKingBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="dVa-dN-uJM">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBV-wY-GqT">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <connections>
+                                    <segue destination="eTb-RM-ajr" kind="show" id="b4z-26-M0N"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dVa-dN-uJM" firstAttribute="top" secondItem="eJo-lk-dn4" secondAttribute="top" id="5If-W7-YsD"/>
+                            <constraint firstItem="EBV-wY-GqT" firstAttribute="leading" secondItem="eJo-lk-dn4" secondAttribute="leading" id="FpS-yd-ehA"/>
+                            <constraint firstItem="eJo-lk-dn4" firstAttribute="bottom" secondItem="dVa-dN-uJM" secondAttribute="bottom" id="GOM-Xi-2Ac"/>
+                            <constraint firstItem="eJo-lk-dn4" firstAttribute="trailing" secondItem="dVa-dN-uJM" secondAttribute="trailing" id="Kb4-Ya-aVm"/>
+                            <constraint firstItem="eJo-lk-dn4" firstAttribute="bottom" secondItem="EBV-wY-GqT" secondAttribute="bottom" id="c38-7v-20K"/>
+                            <constraint firstItem="eJo-lk-dn4" firstAttribute="trailing" secondItem="EBV-wY-GqT" secondAttribute="trailing" id="oLL-Lq-W6s"/>
+                            <constraint firstItem="dVa-dN-uJM" firstAttribute="leading" secondItem="eJo-lk-dn4" secondAttribute="leading" id="xzz-vA-jmv"/>
+                            <constraint firstItem="EBV-wY-GqT" firstAttribute="top" secondItem="eJo-lk-dn4" secondAttribute="top" id="y20-fL-XzF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eJo-lk-dn4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rbU-Qg-t4A"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V1E-Hs-IaB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-39.130434782608695" y="43.526785714285715"/>
         </scene>
         <!--Got SegueVC-->
         <scene sceneID="OcV-Ex-4vk">
@@ -138,28 +175,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="60T-2A-Ovf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036" y="44"/>
+            <point key="canvasLocation" x="1944.9275362318842" y="43.526785714285715"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="JkC-BK-3kD">
+        <scene sceneID="2Ti-4M-7aa">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I1k-8a-bUL" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O1C-RM-4Lk" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nq5-2N-j8e">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZrV-wq-pfZ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="eTb-RM-ajr" kind="relationship" relationship="rootViewController" id="9rL-XI-u6K"/>
+                        <segue destination="bk0-Il-dNh" kind="relationship" relationship="rootViewController" id="DIj-KS-iJ2"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DtF-Tp-785" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Euy-8p-Jen" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1285.5072463768117" y="43.526785714285715"/>
+            <point key="canvasLocation" x="-949.27536231884062" y="43.526785714285715"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gotIceKingBackground.png" width="1024" height="1816"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zNs-VA-TxB"/>
+        <segue reference="eP9-OI-p32"/>
     </inferredMetricsTieBreakers>
 </document>

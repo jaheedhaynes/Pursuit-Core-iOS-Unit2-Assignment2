@@ -8,9 +8,13 @@
 
 import Foundation
 import AVFoundation
+import UIKit
 
 
-class MusicPlayer {
+class MusicPlayer: UIViewController {
+    
+    
+    
     static let shared = MusicPlayer()
     var audioPlayer: AVAudioPlayer?
 

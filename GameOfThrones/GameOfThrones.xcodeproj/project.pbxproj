@@ -11,6 +11,8 @@
 		30E2A345238419E70007703B /* HomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E2A344238419E70007703B /* HomeScreenVC.swift */; };
 		30E2A3472384CF150007703B /* GotSegueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E2A3462384CF150007703B /* GotSegueVC.swift */; };
 		30E2A34923852C4A0007703B /* gotOpeningScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E2A34823852C490007703B /* gotOpeningScreen.swift */; };
+		30E2A34C238582F40007703B /* gotIceKingBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 30E2A34A238582F40007703B /* gotIceKingBackground.png */; };
+		30E2A34D238582F40007703B /* GOT-Theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30E2A34B238582F40007703B /* GOT-Theme.mp3 */; };
 		57D0D22A219F70EA00B5753A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D0D229219F70EA00B5753A /* AppDelegate.swift */; };
 		57D0D22F219F70EA00B5753A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57D0D22D219F70EA00B5753A /* Main.storyboard */; };
 		57D0D231219F70EA00B5753A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57D0D230219F70EA00B5753A /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 		30E2A344238419E70007703B /* HomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVC.swift; sourceTree = "<group>"; };
 		30E2A3462384CF150007703B /* GotSegueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotSegueVC.swift; sourceTree = "<group>"; };
 		30E2A34823852C490007703B /* gotOpeningScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gotOpeningScreen.swift; sourceTree = "<group>"; };
+		30E2A34A238582F40007703B /* gotIceKingBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gotIceKingBackground.png; sourceTree = "<group>"; };
+		30E2A34B238582F40007703B /* GOT-Theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "GOT-Theme.mp3"; sourceTree = "<group>"; };
 		57D0D226219F70EA00B5753A /* GameOfThrones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfThrones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D0D229219F70EA00B5753A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57D0D22E219F70EA00B5753A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 				30E2A342238415700007703B /* GOTTableViewCell.swift */,
 				30E2A3462384CF150007703B /* GotSegueVC.swift */,
 				57D0D23B219F719C00B5753A /* GOTEpisdoe.swift */,
+				30E2A34B238582F40007703B /* GOT-Theme.mp3 */,
+				30E2A34A238582F40007703B /* gotIceKingBackground.png */,
 				57D0D230219F70EA00B5753A /* Assets.xcassets */,
 				57D0D232219F70EA00B5753A /* LaunchScreen.storyboard */,
 				57D0D235219F70EA00B5753A /* Info.plist */,
@@ -137,6 +143,8 @@
 				57D0D234219F70EA00B5753A /* LaunchScreen.storyboard in Resources */,
 				57D0D231219F70EA00B5753A /* Assets.xcassets in Resources */,
 				57D0D22F219F70EA00B5753A /* Main.storyboard in Resources */,
+				30E2A34C238582F40007703B /* gotIceKingBackground.png in Resources */,
+				30E2A34D238582F40007703B /* GOT-Theme.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
