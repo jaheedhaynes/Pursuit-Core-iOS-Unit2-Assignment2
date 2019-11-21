@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30579DDD2386FDEF00D4B8D7 /* GOT-image-joke.png in Resources */ = {isa = PBXBuildFile; fileRef = 30579DDC2386FDEF00D4B8D7 /* GOT-image-joke.png */; };
 		30E2A343238415700007703B /* GOTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E2A342238415700007703B /* GOTTableViewCell.swift */; };
 		30E2A345238419E70007703B /* HomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E2A344238419E70007703B /* HomeScreenVC.swift */; };
 		30E2A3472384CF150007703B /* GotSegueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E2A3462384CF150007703B /* GotSegueVC.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30579DDC2386FDEF00D4B8D7 /* GOT-image-joke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GOT-image-joke.png"; sourceTree = "<group>"; };
 		30E2A342238415700007703B /* GOTTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTTableViewCell.swift; sourceTree = "<group>"; };
 		30E2A344238419E70007703B /* HomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVC.swift; sourceTree = "<group>"; };
 		30E2A3462384CF150007703B /* GotSegueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotSegueVC.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				57D0D23B219F719C00B5753A /* GOTEpisdoe.swift */,
 				30E2A34B238582F40007703B /* GOT-Theme.mp3 */,
 				30E2A34A238582F40007703B /* gotIceKingBackground.png */,
+				30579DDC2386FDEF00D4B8D7 /* GOT-image-joke.png */,
 				57D0D230219F70EA00B5753A /* Assets.xcassets */,
 				57D0D232219F70EA00B5753A /* LaunchScreen.storyboard */,
 				57D0D235219F70EA00B5753A /* Info.plist */,
@@ -145,6 +148,7 @@
 				57D0D22F219F70EA00B5753A /* Main.storyboard in Resources */,
 				30E2A34C238582F40007703B /* gotIceKingBackground.png in Resources */,
 				30E2A34D238582F40007703B /* GOT-Theme.mp3 in Resources */,
+				30579DDD2386FDEF00D4B8D7 /* GOT-image-joke.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
